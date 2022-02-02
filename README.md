@@ -2,6 +2,20 @@
 
 Visualize RIPA data and upload to Elastic Cloud for visualization.
 
+## Content Warning
+
+Conversation contains:
+- dealings with Police
+- gender profiling
+- systemic bias
+
+The phrase "perceived" is going to be used in the dataset. This is profiling data where enforcement is not allowed to ask any information.
+
+All original data labels are defined 
+We'll address this with the upmost **respect**
+
+
+
 ## Steps
 
 - [Create Cloud Account](https://cloud.elastic.co) create deployment (or choose an existing one)
