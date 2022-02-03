@@ -159,8 +159,7 @@ def parse_row(reader) -> None:
             [
                 row.pop("gend_nc"),
                 row.pop("gender_nonconforming"),
-                row.pop("gend")
-                == "5",  # the defined value for gender-nonconforming (1,2,5)
+                row.pop("gend") == "5",  # the defined value for gender-nonconforming (1,2,5)
             ]
         )
 
