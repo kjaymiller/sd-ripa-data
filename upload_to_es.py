@@ -114,6 +114,8 @@ def parse_address(address_fields: dict) -> str:
     elif intersection and address:
         return f"The intersection of {intersection} and {address}"
 
+    else: 
+        return address
 
 def parse_truthiness(val: str, /) -> bool | str:
     """Convert all forms of truthiness to boolean"""
@@ -132,7 +134,7 @@ def parse_row(reader) -> None:
 
     for row in reader:
         # pid will have often be 1 so do make id and driver before parse_truthiness
-        boolean_entries = {"driver": row["pid"] == 1}
+        boolean_entries = {"driver": row["pid"] == "1"}
         row["_id"] = row["stop_id"] + row["pid"]
 
         for k, v in mappings.items():
@@ -159,7 +161,8 @@ def parse_row(reader) -> None:
             [
                 row.pop("gend_nc"),
                 row.pop("gender_nonconforming"),
-                row.pop("gend") == "5",  # the defined value for gender-nonconforming (1,2,5)
+                row.pop("gend")
+                == "5",  # the defined value for gender-nonconforming (1,2,5)
             ]
         )
 
