@@ -9,6 +9,7 @@ from elasticsearch.helpers import parallel_bulk
 from connection import local_client as client
 
 mappings = {
+    "pid": {"type": "keyword"},
     "stop_id": {"type": "keyword"},
     "exp_years": {"type": "integer"},
     "stop_datetime": {"type": "date"},
